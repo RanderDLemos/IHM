@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inatel Carreiras - Mobile</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <div class="mobile-container">
+        <header class="header">
+            <div class="aluno-info">
+                <span class="material-icons">account_circle</span>
+                <div>
+                    <h1>Olá, Aluno Exemplo!</h1>
+                    <p>Engenharia de Computação - 5º Período</p>
+                </div>
+            </div>
+            <div class="disciplinas">
+                <h2>Disciplinas Atuais:</h2>
+                <div class="tag-container">
+                    <span class="tag">Estrutura de Dados</span>
+                    <span class="tag">Redes de Computadores</span>
+                    <span class="tag">Sistemas Operacionais</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="content-area">
+            
+            <section id="page-oportunidades" class="page-content active">
+                
+                <h3>Vagas e Eventos em Destaque 🌟</h3>
+                
+                <div class="filter-bar">
+                    <input type="text" id="filtro-oportunidades" placeholder="Pesquisar ou Filtrar Oportunidades..." />
+                    <button class="material-icons">filter_list</button>
+                </div>
+                
+                <nav class="tab-nav">
+                    <button class="tab-button active" data-tab="oportunidades-tab">Vagas</button>
+                    <button class="tab-button" data-tab="favoritos">Favoritos</button>
+                    <button class="tab-button" data-tab="inscricoes">Minhas Inscrições</button>
+                </nav>
+
+                <div id="oportunidades-tab" class="tab-content active">
+                    <div id="lista-oportunidades">
+                        <div class="card" data-id="1" data-nome="Estágio em Desenvolvimento Front-end" data-local="Empresa XPTO | Remoto" data-tipo="Vaga">
+                            <h4>Estágio em Desenvolvimento Front-end</h4>
+                            <p>Empresa XPTO | Remoto</p>
+                            <span class="card-tag">Vaga</span>
+                        </div>
+                        <div class="card" data-id="2" data-nome="Workshop: Carreira em IA" data-local="Empresa Alpha | 10/Dez" data-tipo="Evento">
+                            <h4>Workshop: Carreira em IA</h4>
+                            <p>Empresa Alpha | 10/Dez</p>
+                            <span class="card-tag event">Evento</span>
+                        </div>
+                        <div class="card" data-id="3" data-nome="Estágio em Redes e Segurança" data-local="Empresa Beta | Santa Rita do Sapucaí" data-tipo="Vaga">
+                            <h4>Estágio em Redes e Segurança</h4>
+                            <p>Empresa Beta | Santa Rita do Sapucaí</p>
+                            <span class="card-tag">Vaga</span>
+                        </div>
+                    </div>
+                </div>
+            
+                <div id="favoritos" class="tab-content">
+                    <h3>Minhas Oportunidades Favoritas ❤️</h3>
+                    <p class="empty-state">Nenhuma vaga ou evento salvo nos favoritos ainda.</p>
+                    <div id="lista-favoritos">
+                        </div>
+                </div>
+
+                <div id="inscricoes" class="tab-content">
+                    <h3>Minhas Inscrições Realizadas 📝</h3>
+                    <div id="lista-inscricoes">
+                        <div class="inscricao-card" data-id="1">
+                            <h4>Estágio em Desenvolvimento Front-end</h4>
+                            <span class="status esperando">Esperando Retorno</span>
+                        </div>
+                        <div class="inscricao-card" data-id="3">
+                            <h4>Estágio em Redes e Segurança</h4>
+                            <span class="status aprovado">Aprovado para Próxima Fase</span>
+                        </div>
+                        <div class="inscricao-card" data-id="4">
+                            <h4>Estágio em Sistemas Embarcados</h4>
+                            <span class="status reprovado">Processo Encerrado</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="page-eventos" class="page-content">
+                <h3>Eventos e Workshops Inatel 🗓️</h3>
+                <p class="section-description">Aqui está uma lista completa de eventos e workshops de empresas parceiras, seguindo o Item 0 do diagrama (Visualizar eventos).</p>
+                <div class="card card-event-detail">
+                    <h4>Hackathon de Inovação</h4>
+                    <p>Data: 20/Dez/2025 | Local: Labs 3 e 4</p>
+                    <button class="btn secondary">Ver Detalhes</button>
+                </div>
+                <div class="card card-event-detail">
+                    <h4>Palestra: Carreira em 5G</h4>
+                    <p>Data: 15/Dez/2025 | Local: Auditório</p>
+                    <button class="btn secondary">Ver Detalhes</button>
+                </div>
+            </section>
+
+            <section id="page-configuracoes" class="page-content">
+                <h3>Configurações do App ⚙️</h3>
+                <div class="config-item">
+                    <p>Notificações de Vagas</p>
+                    <span class="material-icons toggle-switch">toggle_on</span>
+                </div>
+                <div class="config-item">
+                    <p>Privacidade e Termos</p>
+                    <span class="material-icons">chevron_right</span>
+                </div>
+                <div class="config-item logout-item">
+                    <p>Sair da Conta (Logout)</p>
+                    <span class="material-icons">logout</span>
+                </div>
+                <p class="small-text">Versão 1.0.0 | Desenvolvido por Aluno Exemplo</p>
+            </section>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" data-page="oportunidades">
+                <span class="material-icons">home</span>
+                <span class="nav-label">Início</span>
+            </a>
+            <a href="#" class="nav-item" data-page="eventos">
+                <span class="material-icons">event</span>
+                <span class="nav-label">Eventos</span>
+            </a>
+            <a href="#" class="nav-item" data-page="configuracoes">
+                <span class="material-icons">settings</span>
+                <span class="nav-label">Config.</span>
+            </a>
+        </nav>
+
+        <div id="vaga-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" data-modal="vaga-modal">&times;</span>
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-empresa"></p>
+                <hr>
+                <h4 class="sub-heading">Descrição Completa:</h4>
+                <p id="modal-descricao">Esta é a descrição completa da vaga. É importante para o aluno ler todos os requisitos e responsabilidades para garantir que a oportunidade é adequada. (Exemplo: Requisitos: Cursando a partir do 4º período, conhecimento em HTML/CSS/JS.)</p>
+                <h4 class="sub-heading">Informações Adicionais:</h4>
+                <p id="modal-info-adicional">Duração de 6 meses, bolsa auxílio de R$ 1.500,00, possibilidade de efetivação. Benefícios: Vale Transporte, Vale Refeição.</p>
+                
+                <div class="modal-actions">
+                    <button class="btn primary" id="btn-inscrever">Inscrever-se</button>
+                    <button class="btn secondary" id="btn-salvar-favorito">❤️ Salvar</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="confirm-modal" class="modal">
+            <div class="modal-content small-modal">
+                <span class="close-button" id="close-confirm-modal">&times;</span>
+                <h2 class="text-center">Confirmar Inscrição?</h2>
+                <p class="text-center">Você tem certeza que deseja se inscrever para a vaga **<span id="vaga-confirmar"></span>**?</p>
+                <div class="modal-actions">
+                    <button class="btn primary" id="btn-confirmar-sim">Sim, Quero me Inscrever</button>
+                    <button class="btn secondary" id="btn-confirmar-nao">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

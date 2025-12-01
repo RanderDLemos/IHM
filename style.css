@@ -1,0 +1,392 @@
+/* Variáveis de Cor Inatel */
+:root {
+    --inatel-blue: #003366;
+    --inatel-light-blue: #004C99;
+    --background-color: #F0F0F0;
+    --text-color: #333333;
+    --white: #FFFFFF;
+    --success-color: #28A745;
+    --danger-color: #DC3545;
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Container do Mobile (Limitando a largura para simular um celular) */
+.mobile-container {
+    width: 100%;
+    max-width: 450px; /* Largura típica de um celular */
+    background: var(--white);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: var(--inatel-blue);
+    color: var(--white);
+    padding: 20px;
+}
+
+.aluno-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.aluno-info .material-icons {
+    font-size: 48px;
+}
+
+.aluno-info h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.aluno-info p {
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.disciplinas h2 {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.tag-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: var(--inatel-light-blue);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* Área de Conteúdo */
+.content-area {
+    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+}
+
+.page-content {
+    padding: 15px;
+    display: none; /* Esconde todas as páginas por padrão */
+}
+
+.page-content.active {
+    display: block; /* Mostra a página ativa */
+}
+
+/* Navegação de Abas (Tab Navigation) */
+.tab-nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+    border-bottom: 2px solid var(--background-color);
+}
+
+.tab-button {
+    flex-grow: 1;
+    padding: 10px 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--text-color);
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-button.active {
+    color: var(--inatel-blue);
+    font-weight: bold;
+    border-bottom: 3px solid var(--inatel-blue);
+}
+
+.tab-content {
+    display: none; /* Esconde todas as abas por padrão */
+    padding-top: 15px;
+}
+
+.tab-content.active {
+    display: block; /* Mostra a aba ativa */
+}
+
+.filter-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-bar input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.filter-bar button {
+    background: var(--inatel-blue);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Cards de Oportunidades */
+.card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.card h4 {
+    color: var(--inatel-blue);
+    margin-bottom: 5px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.card-tag {
+    display: inline-block;
+    background: var(--success-color); /* Verde para Vaga */
+    color: var(--white);
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 0.75em;
+    margin-top: 5px;
+}
+
+.card-tag.event {
+    background: #FF8C00; /* Laranja para Evento */
+}
+
+
+/* Minhas Inscrições (Status) */
+.inscricao-card {
+    background: var(--white);
+    border: 1px solid #ddd;
+    border-left: 5px solid var(--inatel-blue);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.status.esperando { background-color: #FFC107; color: var(--text-color); } /* Amarelo */
+.status.aprovado { background-color: var(--success-color); } /* Verde */
+.status.reprovado { background-color: var(--danger-color); } /* Vermelho */
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-style: italic;
+}
+
+.section-description {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Configurações */
+.config-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.logout-item p {
+    color: var(--danger-color); /* Vermelho para destaque */
+    font-weight: bold;
+}
+
+.toggle-switch {
+    color: var(--success-color);
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #999;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Menu de Navegação Inferior (Bottom Navigation) */
+.bottom-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding: 5px 0;
+    background: var(--white);
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    max-width: 450px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #999;
+    padding: 8px;
+    transition: color 0.3s;
+}
+
+.nav-item.active {
+    color: var(--inatel-blue);
+}
+
+.nav-label {
+    font-size: 0.7em;
+    margin-top: 3px;
+}
+
+/* Modal de Detalhes da Vaga */
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6); /* Fundo escuro */
+    /* Garante que o modal apareça acima do container mobile */
+    max-width: 450px; 
+    margin: auto;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* Centraliza verticalmente e horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s;
+}
+
+.small-modal {
+    max-width: 350px;
+    padding: 30px 20px;
+}
+
+.sub-heading {
+    font-size: 1em;
+    margin-top: 15px;
+    color: var(--inatel-blue);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+    transition: background-color 0.2s;
+}
+
+.btn.primary {
+    background-color: var(--success-color); 
+    color: var(--white);
+}
+
+.btn.primary:hover {
+    background-color: #1e7e34;
+}
+
+.btn.secondary {
+    background-color: #F8F8F8;
+    color: var(--inatel-blue);
+    border: 1px solid var(--inatel-blue);
+}
+
+.btn.secondary:hover {
+    background-color: #e6e6e6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Animação para o Modal */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

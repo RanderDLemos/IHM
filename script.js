@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             vagaSelecionadaNome = card.dataset.nome;
 
             // Reseta o estado do botão 'Salvar'
-            btnSalvar.textContent = '❤️ Salvar';
+            btnSalvar.textContent = 'Salvar';
             btnSalvar.style.backgroundColor = '#F8F8F8';
             btnSalvar.style.borderColor = 'var(--inatel-blue)';
             btnSalvar.style.color = 'var(--inatel-blue)';
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ação de Confirmação (Item 4.2: Confirmar Inscrição)
     btnConfirmarSim.addEventListener('click', () => {
-        alert(`✅ Inscrição na vaga "${vagaSelecionadaNome}" realizada com sucesso! Você pode acompanhar o status na aba 'Minhas Inscrições'.`);
+        alert(`Inscrição na vaga "${vagaSelecionadaNome}" realizada com sucesso! Você pode acompanhar o status na aba 'Minhas Inscrições'.`);
         confirmModal.style.display = 'none';
         
         // Simulação de adição na aba "Minhas Inscrições"
@@ -179,12 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Funcionalidade de Salvar nos Favoritos (Item 4.3: Salvar nos favoritos)
     btnSalvar.addEventListener('click', (e) => {
-        e.target.textContent = '❤️ Salvo!';
+        e.target.textContent = 'Salvo!';
         e.target.style.backgroundColor = '#FFD700'; // Feedback visual
         e.target.style.borderColor = '#FFD700';
         e.target.style.color = 'var(--text-color)';
         
-        alert(`❤️ Vaga "${vagaSelecionadaNome}" salva nos seus favoritos!`);
+        alert(`Vaga "${vagaSelecionadaNome}" salva nos seus favoritos!`);
         
         // Simulação de adição na aba "Favoritos"
         const listaFavoritos = document.getElementById('lista-favoritos');

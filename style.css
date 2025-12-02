@@ -1,4 +1,4 @@
-/* Variáveis de Cor Inatel */
+
 :root {
     --inatel-blue: #003366;
     --inatel-light-blue: #004C99;
@@ -9,7 +9,6 @@
     --danger-color: #DC3545;
 }
 
-/* Reset Básico */
 * {
     margin: 0;
     padding: 0;
@@ -24,18 +23,16 @@ body {
     min-height: 100vh;
 }
 
-/* Container do Mobile (Limitando a largura para simular um celular) */
 .mobile-container {
     width: 100%;
-    max-width: 450px; /* Largura típica de um celular */
+    max-width: 450px; 
     background: var(--white);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
-
-/* Header */
+ 
 .header {
     background-color: var(--inatel-blue);
     color: var(--white);
@@ -84,21 +81,19 @@ body {
     font-weight: bold;
 }
 
-/* Área de Conteúdo */
 .content-area {
-    flex-grow: 1; /* Permite que o conteúdo ocupe o espaço restante */
+    flex-grow: 1; 
 }
 
 .page-content {
     padding: 15px;
-    display: none; /* Esconde todas as páginas por padrão */
+    display: none; 
 }
 
 .page-content.active {
-    display: block; /* Mostra a página ativa */
+    display: block; 
 }
 
-/* Navegação de Abas (Tab Navigation) */
 .tab-nav {
     display: flex;
     justify-content: space-between;
@@ -125,12 +120,12 @@ body {
 }
 
 .tab-content {
-    display: none; /* Esconde todas as abas por padrão */
+    display: none; 
     padding-top: 15px;
 }
 
 .tab-content.active {
-    display: block; /* Mostra a aba ativa */
+    display: block; 
 }
 
 .filter-bar {
@@ -155,7 +150,6 @@ body {
     cursor: pointer;
 }
 
-/* Cards de Oportunidades */
 .card {
     background: var(--white);
     border: 1px solid #ddd;
@@ -183,7 +177,7 @@ body {
 
 .card-tag {
     display: inline-block;
-    background: var(--success-color); /* Verde para Vaga */
+    background: var(--success-color); 
     color: var(--white);
     padding: 3px 8px;
     border-radius: 3px;
@@ -192,11 +186,10 @@ body {
 }
 
 .card-tag.event {
-    background: #FF8C00; /* Laranja para Evento */
+    background: #FF8C00; 
 }
 
 
-/* Minhas Inscrições (Status) */
 .inscricao-card {
     background: var(--white);
     border: 1px solid #ddd;
@@ -217,9 +210,9 @@ body {
     color: var(--white);
 }
 
-.status.esperando { background-color: #FFC107; color: var(--text-color); } /* Amarelo */
-.status.aprovado { background-color: var(--success-color); } /* Verde */
-.status.reprovado { background-color: var(--danger-color); } /* Vermelho */
+.status.esperando { background-color: #FFC107; color: var(--text-color); } 
+.status.aprovado { background-color: var(--success-color); } 
+.status.reprovado { background-color: var(--danger-color); } 
 
 .empty-state {
     text-align: center;
@@ -234,7 +227,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Configurações */
 .config-item {
     display: flex;
     justify-content: space-between;
@@ -245,7 +237,7 @@ body {
 }
 
 .logout-item p {
-    color: var(--danger-color); /* Vermelho para destaque */
+    color: var(--danger-color); 
     font-weight: bold;
 }
 
@@ -260,7 +252,6 @@ body {
     margin-top: 30px;
 }
 
-/* Menu de Navegação Inferior (Bottom Navigation) */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
@@ -293,9 +284,8 @@ body {
     margin-top: 3px;
 }
 
-/* Modal de Detalhes da Vaga */
 .modal {
-    display: none; /* Escondido por padrão */
+    display: none; 
     position: fixed;
     z-index: 10;
     left: 0;
@@ -303,15 +293,14 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.6); /* Fundo escuro */
-    /* Garante que o modal apareça acima do container mobile */
+    background-color: rgba(0,0,0,0.6); 
     max-width: 450px; 
     margin: auto;
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto; /* Centraliza verticalmente e horizontalmente */
+    margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 90%;
@@ -385,7 +374,6 @@ body {
     text-align: center;
 }
 
-/* Animação para o Modal */
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity: 1;}
